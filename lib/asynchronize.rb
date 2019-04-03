@@ -18,7 +18,7 @@ module Asynchronize
       def self.asynchronize(*methods)
         # require 'pry'; binding.pry
         async_container = Asynchronize.get_container_for(self)
-        async_container.instance_eval do
+        async_container.instance_eval do 
           Asynchronize._define_methods_on_object(methods, self)
         end
       end
